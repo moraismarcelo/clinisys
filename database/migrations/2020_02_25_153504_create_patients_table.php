@@ -15,12 +15,11 @@ class CreatePatientsTable extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('cpf');
             $table->string('name');
-            $table->string('last_name');
-            $table->integer('cpf');
-            $table->date('birthdate');
-            $table->integer('ddd1');
-            $table->integer('cellphone1');
+            $table->string('birthdate');
+            $table->string('ddd1');
+            $table->string('cellphone1');
             $table->string('health_insurance');
             $table->timestamps();
         });

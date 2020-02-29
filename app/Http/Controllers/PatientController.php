@@ -37,6 +37,24 @@ class PatientController extends Controller
      */
     public function store(Request $request)
     {
+        $patient = new Patient();
+
+        $data = request()->validate([
+
+        'cpf' => '',
+        'name' => '',
+        'birthdate' => '',
+        'ddd1' => '',
+        'cellphone1' => '',
+        'health_insurance' => '',
+
+        ]);
+
+
+        $patient = Patient::create($data);
+
+        return redirect(route('patient.index'));
+
 
     }
 

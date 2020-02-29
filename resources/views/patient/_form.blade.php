@@ -1,52 +1,58 @@
 @yield('form')
 
-<form>
 
+
+<div class="form-row">
     @csrf
-    <div class="form-row">
-        <div class="form-group col-md-5">
-            <label for="inputEmail4">Nome</label>
-            <input type="text" class="form-control" id="inputEmail4" placeholder="Nome" name="name">
-        </div>
-        <div class="form-group col-md-5">
-            <label for="inputPassword4">Sobrenome</label>
-            <input type="text" class="form-control" id="inputPassword4" placeholder="Sobrenome" name="last_name">
-        </div>
+    <div class="form-group col-md-2">
+        <label for="inputEmail4">CPF</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="Somente números" name="cpf">
     </div>
-    <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+
+</div>
+<div class="form-row">
+    <div class="form-group col-md-5">
+        <label for="inputAddress">Nome Completo</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Ex: João da Silva" name="name">
     </div>
-    <div class="form-group">
-        <label for="inputAddress2">Address 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+
+    <div class="form-group col-md-2">
+        <label for="inputAddress2">Data de Nascimento</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Ex: 01/01/2000" name="birthdate">
     </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
-        </div>
-        <div class="form-group col-md-4">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
-                <option>...</option>
-            </select>
-        </div>
-        <div class="form-group col-md-2">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
-        </div>
+</div>
+
+
+<div class="form-row">
+    <div class="form-group col-md-1">
+        <label for="inputCity">DDD</label>
+        <input type="text" class="form-control" id="inputCity" name="ddd1">
     </div>
-    <div class="form-group">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-                Check me out
-            </label>
-        </div>
+    <div class="form-group col-md-2">
+        <label for="inputCity">Telefone</label>
+        <input type="text" class="form-control" id="inputCity" name="cellphone1">
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+
+</div>
+
+<div class="form-row">
+
+    <div class="form-group col-md-2">
+        <label for="inputState">Tipo de Convênio</label>
+        <select id="inputState" class="form-control" name="health_insurance">
+
+            <option value selected="1">Particular</option>
+            <option value="2">Unimed</option>
+            <option value="3">SUS</option>
+        </select>
+    </div>
+</div>
+
+<button type="submit" class="btn btn-primary">Salvar</button>
+
+
 </form>
 
-@endsection
+@stop
+
+

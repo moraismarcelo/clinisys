@@ -29,4 +29,8 @@ Route::get('/pacientes', 'PatientController@index')->name('patient.index');
 
 Route::get('/pacientes/create', 'PatientController@create')->name('patient.create');
 
+Route::post('/pacientes' ,'PatientController@store')->name('patient.store');
+
+Route::get('pacientes/{patient', 'PatientController@show')->name('patient.show');
+
 

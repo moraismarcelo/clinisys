@@ -29,7 +29,9 @@
             <td>{{$patient->ddd1.$patient->cellphone1}}</td>
             <td>{{$patient->health_insurance}}</td>
             <td>
-                <button class="btn btn-sm btn-success ">Editar</button>
+                <a href="{{route('patient.show')}}">
+                    <button class="btn btn-sm btn-success">Detalhes</button>
+                </a>
                 <button class="btn btn-sm btn-primary">Histórico</button>
                 <button class="btn btn-sm btn-danger">Excluir</button>
 
