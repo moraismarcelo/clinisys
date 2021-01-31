@@ -16,12 +16,19 @@ class CreateExamesTable extends Migration
         Schema::create('exames', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome');
-            $table->money_format('preco');
+            $table->double('preco', 8, 2);
             $table->unsignedBigInteger('paciente_id');
             $table->timestamps();
-            $table->softDeletes;
+            $table->softDeletes();
+        });
+
+        Schema::table('exames', function(Blueprint $table){
+            $table->foreign('paciente_id')->references('id')->on('patients')->onDelete('cascade');   
+
         });
     }
+
+
 
     /**
      * Reverse the migrations.

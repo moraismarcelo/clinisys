@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+    @extends('adminlte::page')
 
 @section('content')
 
@@ -12,11 +12,8 @@
     <table class="table table-hover">
         <thead>
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">CPF</th>
-            <th scope="col">NOME</th>
-            <th scope="col">TELEFONE</th>
-            <th scope="col">CONVÊNIO</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Valor</th>
             <th scope="col">AÇÂO</th>
         </tr>
         </thead>

@@ -11,6 +11,10 @@
 |
 */
 
+use App\Http\Controllers\ExameController;
+
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -32,5 +36,7 @@ Route::get('/pacientes/create', 'PatientController@create')->name('patient.creat
 Route::post('/pacientes' ,'PatientController@store')->name('patient.store');
 
 Route::get('pacientes/{patient', 'PatientController@show')->name('patient.show');
+
+Route::get('/exames' ,'ExameController@index');
 
 
